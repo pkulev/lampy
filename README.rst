@@ -1,4 +1,4 @@
-|Build Status| |Coverage|
+|PyPI| |Build Status| |Coverage|
 
 =============================================================
 Lampy: **La**\ unchpad **M**\ ini **p**\ ython librar\ **y**
@@ -54,3 +54,5 @@ Documentation
    :target: https://travis-ci.org/pkulev/lampy
 .. |Coverage| image:: https://codecov.io/gh/pkulev/lampy/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/pkulev/lampy
+.. |PyPI| image:: https://badge.fury.io/py/lampylib.svg
+    :target: https://badge.fury.io/py/lampylib
