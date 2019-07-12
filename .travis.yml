@@ -1,0 +1,29 @@
+sudo: false
+dist: xenial
+language: python
+python:
+  - "3.7"
+
+addons:
+  apt:
+    packages:
+      - libasound2
+      - libasound2-dev
+
+cache:
+  pip: true
+  directories:
+    - "$HOME/.cache/pypoetry"
+
+install:
+  - pip install --upgrade pip
+  - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py > get-poetry.py
+  - python get-poetry.py -y
+  - source $HOME/.poetry/env
+  - poetry install --develop .
+
+script:
+  - poetry run pytest --cov ./lampylib --cov-report xml -s -v tests/
+
+after_success:
+  - codecov
