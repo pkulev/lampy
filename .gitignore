@@ -1,0 +1,4 @@
+**/__pycache__
+.tox
+lampy.egg-info
+poetry.lock
